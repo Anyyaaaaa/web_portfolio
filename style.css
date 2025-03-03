@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f58746;
+    color: #333;
+}
+
+header {
+    background: #333;
+    align-items: center;
+    color: white;
+    padding: 5px;
+    text-align: left;
+}
+
+.title {
+    color: white;
+    font-size: 24px;
+    margin-left: 15px;
+}
+
+.gallery {
+    justify-content: center;
+    gap: 20px;
+}
+
+
+
+
