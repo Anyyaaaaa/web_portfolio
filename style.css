@@ -8,19 +8,19 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4; /* Світло-сірий фон */
-    color: #333; /* Темно-сірий текст */
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 header {
-    background: #470e13; /* Темно-сірий фон */
-    padding: 10px 40px; /* Залишаємо відступи для шапки */
+    background: #470e13;
+    padding: 10px 40px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     color: white;
     width: 100%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Додаємо тінь для елегантності */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 h1 {
@@ -35,7 +35,7 @@ h3 {
 
 header nav {
     display: flex;
-    margin-left: 500px; /* Відстань між логотипом і навігацією */
+    margin-left: 500px;
 }
 
 header nav ul {
@@ -61,25 +61,25 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    background: linear-gradient(45deg, #401010, #5a3b3b); /* Темно-сірий до світло-сірого градієнт */
+    background: linear-gradient(45deg, #401010, #5a3b3b);
     color: white;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     transform: translateY(-3px);
 }
 
 header nav ul li a::after {
-    content: ''; /* Підсвітка під посиланням забрана */
+    content: '';
     position: absolute;
     width: 0;
     height: 3px;
     bottom: 0;
     left: 50%;
-    background-color: #666; /* Світло-сірий підсвітка для активного пункту */
+    background-color: #666;
     transition: width 0.3s ease, left 0.3s ease;
 }
 
 header nav ul li a:hover::after {
-    width: 0; /* Прибрано підсвітку при наведенні */
+    width: 0;
     left: 50%;
 }
 
@@ -166,8 +166,8 @@ header nav ul li a:hover::after {
 #about {
     display: flex;
     justify-content: left;
-    background-image: url('img/polot.jpeg'); /* Додаємо зображення */
-    background-size: cover; /* Зображення покриває весь блок */
+    background-image: url('img/polot.jpeg');
+    background-size: cover;
     background-position: center;
     align-items: center;
     min-height: 60vh;
@@ -200,12 +200,12 @@ header nav ul li a:hover::after {
 
 .separator {
     width: 100%;
-    height: 200px; /* Висота смуги */
-    background-color: white; /* Колір смуги */
+    height: 200px; 
+    background-color: white;
 }
 
 footer {
-    background: #470e13; /* Такий самий колір, як у шапки */
+    background: #470e13;
     color: white;
     padding: 30px 0;
     text-align: center;
