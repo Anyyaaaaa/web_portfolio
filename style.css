@@ -7,102 +7,262 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; /* Світло-сірий фон */
+    color: #333; /* Темно-сірий текст */
 }
 
 header {
-    background: #656464;
-    padding: 15px 50px;
+    background: #470e13; /* Темно-сірий фон */
+    padding: 10px 40px; /* Залишаємо відступи для шапки */
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: flex-start;
     color: white;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Додаємо тінь для елегантності */
+}
+
+h1 {
+    font-family: "Brush Script MT", cursive;
+    font-size: 55px;
+}
+
+h3 {
+    font-size: 25px;
+    padding: 5px;
+}
+
+header nav {
+    display: flex;
+    margin-left: 500px; /* Відстань між логотипом і навігацією */
 }
 
 header nav ul {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 header nav ul li {
-    margin-left: 20px;
+    position: relative;
 }
 
 header nav ul li a {
     color: white;
     font-size: 18px;
+    font-weight: 600;
+    padding: 12px 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+header nav ul li a:hover {
+    background: linear-gradient(45deg, #401010, #5a3b3b); /* Темно-сірий до світло-сірого градієнт */
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+}
+
+header nav ul li a::after {
+    content: ''; /* Підсвітка під посиланням забрана */
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 50%;
+    background-color: #666; /* Світло-сірий підсвітка для активного пункту */
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+header nav ul li a:hover::after {
+    width: 0; /* Прибрано підсвітку при наведенні */
+    left: 50%;
+}
+
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(135deg, #1a1a1a, #333);
+    color: white;
+    padding: 50px 70px;
+    border-radius: 10px;
+    max-width: 1300px;
+    margin: 50px auto;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.carousel {
+    width: 450px;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.carousel-images {
+    display: flex;
+    width: 200%;
+    animation: slide 13s infinite;
+}
+
+.carousel-images img {
+    width: 100%;
+    height: 600px;
+    object-fit: contain;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0%); }
+    16.66% { transform: translateX(-35%); }
+    50% { transform: translateX(-85%); }
+    66.66% { transform: translateX(-110%); }
+    83.33% { transform: translateX(-150%); }
+    100% { transform: translateX(-200%); }
+}
+
+.home-text {
+    max-width: 600px;
+    padding-left: 50px;
+}
+
+.home-text h2 {
+    font-size: 36px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.home-text p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
 
 .btn {
     display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background: #451c23;
-    color: white;
-    border-radius: 5px;
-}
-
-.about {
-    display: flex;
-    align-items: center;
-    padding: 50px;
-    background: white;
-}
-
-.about img {
-    width: 150px;
-    border-radius: 50%;
-    margin-right: 20px;
-}
-
-.skills {
-    text-align: center;
-    padding: 50px;
-    background: #ddd;
-}
-
-.skills-container {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.skill {
+    padding: 12px 30px;
     background: #666;
     color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
-/* Останні роботи */
-.portfolio-preview {
-    text-align: center;
-    padding: 50px;
-    background: white;
+.btn:hover {
+    background: #888;
+    transform: translateY(-3px);
 }
 
-.gallery {
+
+#about {
     display: flex;
-    justify-content: center;
-    gap: 10px;
+    justify-content: left;
+    background-image: url('img/polot.jpeg'); /* Додаємо зображення */
+    background-size: cover; /* Зображення покриває весь блок */
+    background-position: center;
+    align-items: center;
+    min-height: 60vh;
+    color: white;
+    text-align: left;
+    padding: 50px 150px;
 }
 
-.gallery img {
-    width: 150px;
-    border-radius: 5px;
+.carousel {
+    max-width: 800px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel:hover {
+    transform: scale(1.02);
+}
+
+.carousel p {
+    font-size: 20px;
+    line-height: 1.6;
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+.separator {
+    width: 100%;
+    height: 200px; /* Висота смуги */
+    background-color: white; /* Колір смуги */
 }
 
 footer {
-    background: #444;
+    background: #470e13; /* Такий самий колір, як у шапки */
     color: white;
+    padding: 30px 0;
     text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
 }
 
-footer .social a {
-    margin: 0 10px;
-    color: white;
+.footer-social h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
 }
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 5px 0;
+}
+
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #f4a261;
+}
+
+.footer-social a {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.footer-social img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease;
+}
+
+.footer-social img:hover {
+    transform: scale(1.1);
+}
+
+.footer-copy {
+    font-size: 14px;
+    margin-top: 20px;
+    opacity: 0.7;
+}
+
