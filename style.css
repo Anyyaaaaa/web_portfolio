@@ -424,3 +424,61 @@ footer {
     opacity: 0.7;
 }
 
+.shooting-section {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #f0f0f0;
+}
+
+.shooting-title {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+/* Стилі для каруселі */
+.carousel-container {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-wrapper {
+    display: flex;
+    animation: slide 15s infinite linear;
+}
+
+.carousel-item {
+    min-width: 100%;
+    height: auto;
+    transition: transform 1s ease;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Анімація для каруселі */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(-200%);
+    }
+    75% {
+        transform: translateX(-300%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
