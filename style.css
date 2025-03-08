@@ -424,61 +424,87 @@ footer {
     opacity: 0.7;
 }
 
-.shooting-section {
-    text-align: center;
+.portfolio-section {
     padding: 50px 0;
-    background-color: #f0f0f0;
+    text-align: center;
 }
 
-.shooting-title {
-    font-size: 36px;
+.portfolio-section h1 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 40px;
     color: #333;
-    margin-bottom: 30px;
     text-transform: uppercase;
-}
-
-/* Стилі для каруселі */
-.carousel-container {
+    letter-spacing: 1px;
+    font-weight: bold;
     position: relative;
-    width: 80%;
-    margin: 0 auto;
+    font-family: 'Arial Black', sans-serif;
+    padding: 5px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 20px;
+}
+
+.portfolio-item {
+    position: relative;
     overflow: hidden;
-}
-
-.carousel-wrapper {
-    display: flex;
-    animation: slide 15s infinite linear;
-}
-
-.carousel-item {
-    min-width: 100%;
-    height: auto;
-    transition: transform 1s ease;
-}
-
-.carousel-item img {
-    width: 100%;
-    height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 250px;
 }
 
-/* Анімація для каруселі */
-@keyframes slide {
-    0% {
-        transform: translateX(0);
-    }
-    25% {
-        transform: translateX(-100%);
-    }
-    50% {
-        transform: translateX(-200%);
-    }
-    75% {
-        transform: translateX(-300%);
-    }
-    100% {
-        transform: translateX(0);
-    }
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
+
+.portfolio-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 12px;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#info {
+    background: linear-gradient(135deg, #1a1a1a, #333);
+    color: white;
+    padding: 50px 70px;
+    border-radius: 10px;
+    max-width: 1300px;
+    margin: 50px auto;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+#info h2 {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+#info p {
+    font-size: 16px;
+}
+
+#info img {
+    width: 400px;
+    height: auto;
+    border-radius: 8px;
+    align-content: flex-start;
+}
+
+
+
+
 
